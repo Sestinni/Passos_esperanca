@@ -71,7 +71,7 @@ header{
 /* MAIN */
 main {
     font-family: "NUNITO";
-    padding-top: 9rem;
+    padding-top: 8rem;
     background-color: whitesmoke;
     width: 100%;
     height: 100%;
@@ -140,6 +140,17 @@ main {
     border: 1px solid #000000;
     margin: 0.15rem 0 1rem 0;
 }
+.desc_images {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.desc_images img {
+    border-radius: 10px;
+    width: 19rem;
+    height: 20rem;
+}
 .cards {
     width: 40%;
     display: grid;
@@ -153,15 +164,27 @@ main {
     min-height: 15.625rem;
     padding: 1.2rem;
     box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .valor_amarelo {
-    background-color: #F2C14E;
+    background-color: #ffffff;
     box-shadow: 1px 2px 7px 0px rgb(29, 29, 194);
 }
+.valor_amarelo:hover {
+    background-color: #f2c14ee3;
+    transform: scale(1.05);
+    box-shadow: 1px 2px 7px 0px rgb(0, 0, 0);
+}
 .valor_azul {
-    background-color: #075985;
+    background-color: #ffffff;
     box-shadow: 1px 2px 7px 0px #a79f36;
     transform: translateY(10rem);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.valor_azul:hover {
+    background-color: #0d94e8b6;
+    transform: translateY(10rem) scale(1.05);
+    box-shadow: 1px 2px 7px 0px rgb(0, 0, 0);
 }
 .card h1 {
     font-size: 1.4rem;
@@ -184,13 +207,19 @@ footer {
 }
 .direitos {
     width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.direitos_cont {
+    margin-left: 2rem;
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin-right: 2rem;
 }
 .direitos img {
     width: 3rem;
+    padding-right: 10px;;
 }
 .direitos p {
     font-size: 18px;
@@ -198,12 +227,293 @@ footer {
 }
 .icons_foot {
     width: 60%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: flex-end;
 }
-.icons_foot img {
+.icons_foot_cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2rem;
+}
+.icons_foot_cont a {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
     margin-left: 2rem;
-    width: 4.4rem;
+}
+.icons_foot_cont img {
+    width: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+}
+.icon_hover {
+    opacity: 0;
+}
+.icons_foot_cont a:hover .icon_normal {
+    opacity: 0;
+}
+.icons_foot_cont a:hover .icon_hover {
+    opacity: 1;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - CELULAR
+   NAO MEXER AINDA
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* GERAL */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* =========================================
+       HEADER
+       ========================================= */
+
+    header {
+        height: 5rem;
+        width: 100%;
+    }
+
+    .hero_logo {
+        width: 25%;
+    }
+
+    .hero_logo img {
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 0;
+        margin-left: 0.8rem;
+    }
+
+    .hero_links {
+        width: 50%;
+        justify-content: space-around;
+    }
+
+    .hero_links a {
+        font-size: 1rem;
+    }
+
+    .hero_part {
+        width: 25%;
+    }
+
+    .hero_part a {
+        font-size: 1rem;
+        padding: 7px 10px;
+        border-width: 2px;
+    }
+
+
+    /* =========================================
+       MAIN
+       ========================================= */
+
+    main {
+        padding-top: 7rem;
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* =========================================
+       INTRO / BANNER
+       ========================================= */
+
+    .main_intro {
+        width: 100%;
+        height: auto;
+    }
+
+    .main_intro_img {
+        width: 92%;
+    }
+
+    .main_intro_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main_intro_tex {
+        width: 90%;
+    }
+
+    .main_intro_tex h1 {
+        font-size: 2.2rem;
+    }
+
+    .main_intro_tex p {
+        font-size: 1.1rem;
+    }
+
+
+    /* =========================================
+       SEÇÃO PRINCIPAL
+       ========================================= */
+
+    .main_section {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        padding-top: 3rem;
+        gap: 2rem;
+    }
+
+
+    /* =========================================
+       TEXTOS
+       ========================================= */
+
+    .desc {
+        width: 92%;
+    }
+
+    .desc_text {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    .desc_text h2 {
+        font-size: 1.4rem;
+    }
+
+    .desc_text p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+
+    /* =========================================
+       IMAGENS DA DESCRIÇÃO
+       ========================================= */
+
+    .desc_images {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 1rem;
+    }
+
+    .desc_images img {
+        width: 100%;
+        height: auto;
+        max-width: 19rem;
+    }
+
+
+    /* =========================================
+       CARDS
+       ========================================= */
+
+    .cards {
+        width: 92%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 2rem;
+    }
+
+    .card {
+        width: 17rem;
+        min-height: 15.625rem;
+
+        padding: 1.2rem;
+    }
+
+    .card h1 {
+        font-size: 1.4rem;
+    }
+
+
+    /* =========================================
+       TIRA O DESLOCAMENTO DOS CARDS AZUIS
+       ========================================= */
+
+    .valor_azul {
+        transform: none;
+    }
+
+    .valor_azul:hover {
+        transform: scale(1.03);
+    }
+
+
+    /* =========================================
+       FOOTER
+       ========================================= */
+
+    footer {
+        margin-top: 4rem;
+
+        width: 100%;
+        height: auto;
+
+        min-height: 8rem;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .direitos {
+        width: 100%;
+        height: auto;
+
+        justify-content: center;
+    }
+
+    .direitos_cont {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .direitos img {
+        width: 2.5rem;
+    }
+
+    .direitos p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .icons_foot {
+        width: 100%;
+        height: auto;
+
+        justify-content: center;
+    }
+
+    .icons_foot_cont {
+        margin-right: 0;
+    }
+
+    .icons_foot_cont a {
+        margin: 0 0.8rem;
+    }
 }

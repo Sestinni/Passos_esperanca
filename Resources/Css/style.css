@@ -119,98 +119,101 @@ main {
     padding: 30px;
     border-radius: 30px;
     display: flex;
-    align-items: stretch;
-}
-.intro {
-    flex: 0 0 42%;
-    max-width: 500px;
-    height: 380px;
-    background-color: #FFD166;
-    border-radius: 25px;
-    display: flex;
-    justify-self: start;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-bottom: 10px;
 }
 
-/* Quando colocar a foto */
-.intro img {
+.main_intro {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* DESCRIÇÃO */
-.descricao {
+    height: 30%;
     display: flex;
-    gap: 20px;
-    margin-bottom: 25px;
-    align-items: stretch;
+    justify-content: center;
 }
-.secao_principal {
-    flex: 1;
-    min-width: 0;
-    border-radius: 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+.main_intro_img {
+    width: 80%;
+    position: relative;
+}
+.main_intro_img img {
+    width: 100%;
+    display: block;
+}
+.main_intro_img::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+.main_intro_tex {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.main_intro_tex h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: white;
+}
+.main_intro_tex p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #F2C14E;
+}
+/* MAIN PRINCIPAL */
+.main_section {
+    padding-top: 5rem;
+    width: 100%;
+    height: 70%;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
 }
-
-.texto1,
-.texto2 {
-    flex: 0 0 300px;
-    width: 300px;
-    height: 160px;
-    min-height: 0;
-    padding: 15px 20px;
-    border-radius: 20px;
+.desc {
+    width: 45%;
+}
+.desc_text {
     background-color: #ffffff;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 1.3rem;
+    margin: 1rem;
+}
+.desc_text hr {
+    border: 1px solid #000000;
+    margin: 0.15rem 0 1rem 0;
+}
+.cards {
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px 30px;
+}
+.card {
+    border: 1.5px solid #000000;
+    border-radius: 15px;
+    width: 15rem;
+    min-height: 15.625rem;
+    padding: 1.2rem;
     box-sizing: border-box;
 }
-
-
-.texto1 {
-    border-top: 8px solid #FF6B6B;
+.valor_amarelo {
+    background-color: #ffffff;
+    box-shadow: 1px 2px 7px 0px rgb(29, 29, 194);
 }
-.texto2 {
-    border-top: 8px solid #4CC9A4;
-    text-align: right;
+.valor_azul {
+    background-color: #ffffff;
+    box-shadow: 1px 2px 7px 0px #a79f36;
+    transform: translateY(10rem);
 }
-
-/* CARDS DOS VALORES */
-.cartoes {
-    display: flex;
-    gap: 18px;
-    width: 100%;
-    justify-content: center;
-    margin: 25px auto;
+.card h1 {
+    font-size: 1.4rem;
+    font-style: italic;
 }
-
-.cartao_valor {
-    background-color: white;
-    width: 300px;
-    height: 200px;
-    padding: 150px;
-    border-radius: 20px;
-    text-align: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    box-sizing: border-box;
+.card hr {
+    border: 1px solid #000000;
+    margin: 0.15rem 0 0.8rem 0;
 }
 
 .sobre-nos {
