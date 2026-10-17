@@ -68,3 +68,71 @@ header{
     background-color: #F2C14E;
     border: 3px solid #17212B;
 }
+
+
+/* footer */
+footer {
+    font-family: "NUNITO";
+    background-color: #075985;
+    margin-top: 7rem;
+    width: 100%;
+    height: 6.562rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.direitos {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.direitos_cont {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.direitos img {
+    width: 3rem;
+    padding-right: 10px;;
+}
+.direitos p {
+    font-size: 18px;
+    color: #ffffff;
+}
+.icons_foot {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.icons_foot_cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2rem;
+}
+.icons_foot_cont a {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+}
+.icons_foot_cont img {
+    width: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+}
+.icon_hover {
+    opacity: 0;
+}
+.icons_foot_cont a:hover .icon_normal {
+    opacity: 0;
+}
+.icons_foot_cont a:hover .icon_hover {
+    opacity: 1;
+}
