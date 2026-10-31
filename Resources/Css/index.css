@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+body,html {
+    background-color: #f1faee;
+    overflow-x: clip;
+}
 /* HEADER */
 header{
     font-family: "NUNITO";
@@ -27,6 +31,7 @@ header{
 .hero_logo img {
     width: 4.8rem;
     height: 4.8rem;
+    border-radius: 45%;
     padding: 0 0 0 5.8rem;
 }
 .hero_links {
@@ -67,4 +72,282 @@ header{
 .hero_part a:hover{
     background-color: #F2C14E;
     border: 3px solid #17212B;
+}
+/* MAIN */
+main {
+    width: 100%;
+    font-family: "NUNITO";
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.painel_fotos {
+    position: relative;
+    width: 90%;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.painel_fotos .foto.ativa {
+    opacity: 1;
+}
+.painel_fotos .foto{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.introducao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.introducao img {
+    width: 90%;
+    height: 30rem;
+}
+.introducao h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #087E8B;
+}
+.introducao p {
+    font-size: 1.2rem;
+}
+.introducao blockquote {
+    text-align: center;
+    margin-top: 20px;
+    width: 80%;
+    font-size: 1.1rem;
+    font-style: italic;
+    background: linear-gradient(135deg, #48BFE3, #4CC9A4);
+    padding: 15px;
+    border-radius: 15px;
+}
+hr {
+    margin: 2rem 0 2rem 0;
+    width: 90%;
+    border: 2px solid #F2C14E;
+    border-radius: 5px;
+}
+.quem_somos_div {
+    border-top: 2px solid #F2C14E;
+    border-bottom: 2px solid #F2C14E;
+    padding: 2rem 0 2rem 0;
+    margin-top: 3rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.quem_somos_texto {
+    font-size: 1.1rem;
+    width: 35%;
+    text-align: center;
+}
+.quem_somos_foto {
+    width: 35%;
+    min-height: 190px;
+    border: 1.7px solid #000000;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.quem_somos_foto img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+}
+.impacto {
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+}
+.impacto_line_config {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 4.5rem;  
+}
+.impacto_line {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 4rem;
+    border-radius: 10px 0 0 10px;
+    background: linear-gradient(135deg, #48BFE3, #4CC9A4);
+    border: 0.7px solid #000000;
+    width: 65%;
+    height: 100%;
+
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
+}
+.impacto_line.animar {
+    transform: translateX(0);
+    opacity: 1;
+}
+.impacto_cont {
+    width: 100%;
+    margin-top: 3rem;
+}
+.impacto_cont h3 {
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+    background-color: #FFD166;
+    color: #17212B;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.impacto_cont p {
+    display: inline-block;
+    width: 180px;
+    vertical-align: middle;
+    margin: 10px;
+}
+.sobre {
+    width: 100%;
+    margin-top: 5rem;
+}
+.listra_fill {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 4.5rem;  
+    margin-bottom: 5rem;
+}
+.listra_fill_bac {
+    display: flex;
+    align-items: center;
+    padding: 0 4rem 0 0;
+    border-radius: 0 10px 10px 0;
+    border: 0.7px solid #000000;
+    background: linear-gradient(135deg, #48BFE3, #4CC9A4);
+    width: 65%;
+    height: 100%;
+    justify-content: end;
+
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
+}
+.listra_fill_bac.animar {
+    transform: translateX(0);
+    opacity: 1;
+}
+.sobre_cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.sobre_card {
+    border: 1.5px solid #000000;
+    border-radius: 10px;
+    width: 15rem;
+    padding: 1.2rem;
+    box-sizing: border-box;
+    background-color: #fff6e2;
+    box-shadow: 1px 2px 7px 0px rgb(17, 17, 19);
+}
+.sobre_card h2 {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+.sobre_card p {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+.link-seta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #075985;
+    text-decoration: underline;
+}
+.seta {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+}
+.link-seta:hover .seta {
+    transform: translateX(4px) rotate(45deg);
+}
+/* footer */
+footer {
+    font-family: "NUNITO";
+    background-color: #075985;
+    margin-top: 7rem;
+    width: 100%;
+    height: 6.562rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.direitos {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.direitos_cont {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.direitos img {
+    border-radius: 100%;
+    width: 3rem;
+    padding-right: 10px;;
+}
+.direitos p {
+    font-size: 18px;
+    color: #ffffff;
+}
+.icons_foot {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.icons_foot_cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2rem;
+}
+.icons_foot_cont a {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+}
+.icons_foot_cont img {
+    width: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+}
+.icon_hover {
+    opacity: 0;
+}
+.icons_foot_cont a:hover .icon_normal {
+    opacity: 0;
+}
+.icons_foot_cont a:hover .icon_hover {
+    opacity: 1;
 }

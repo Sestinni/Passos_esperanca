@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background-color: whitesmoke;
+}
 /* HEADER */
 header{
     font-family: "NUNITO";
@@ -27,6 +30,7 @@ header{
 .hero_logo img {
     width: 4.8rem;
     height: 4.8rem;
+    border-radius: 45%;
     padding: 0 0 0 5.8rem;
 }
 .hero_links {
@@ -72,7 +76,6 @@ header{
 main {
     font-family: "NUNITO";
     padding-top: 8rem;
-    background-color: whitesmoke;
     width: 100%;
     height: 100%;
 }
@@ -85,10 +88,12 @@ main {
 }
 .main_intro_img {
     width: 80%;
+    height: 35rem;
     position: relative;
 }
 .main_intro_img img {
     width: 100%;
+    height: 35rem;
     display: block;
 }
 .main_intro_img::after{
@@ -194,11 +199,62 @@ main {
     border: 1px solid #000000;
     margin: 0.15rem 0 0.8rem 0;
 }
+.localizacao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.localizacao_section {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin: 35px auto;
+    padding: 24px;
+    background-color: #E8F8F5;
+}
+.localizacao_section h2{
+    color: #118AB2;
+}
+.localizacao_endereco {
+    color: #3d5550;
+}
+
+.mapa_container {
+    width: 100%;
+    height: clamp(240px, 40vw, 420px);
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+.mapa_container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.localizacao_link {
+    text-decoration: none;
+    color: #087E8B;
+    font-weight: 800;
+    display: inline-block;
+    background-color: #FFD166;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.localizacao_link:hover{
+    color: #FFD166;
+    background-color: #087E8B;
+}
 /* FOOTER */
 footer {
     font-family: "NUNITO";
     background-color: #075985;
-    margin-top: 7rem;
+    margin-top: 4rem;
     width: 100%;
     height: 6.562rem;
     display: flex;
@@ -219,6 +275,7 @@ footer {
 }
 .direitos img {
     width: 3rem;
+    border-radius: 100%;
     padding-right: 10px;;
 }
 .direitos p {
